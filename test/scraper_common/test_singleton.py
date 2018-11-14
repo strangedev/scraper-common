@@ -1,6 +1,6 @@
 import unittest
 
-from src.scraper_common.singleton import SingletonMeta
+from scraper_common.singleton import SingletonMeta
 
 
 class TestSingletonMeta(unittest.TestCase):

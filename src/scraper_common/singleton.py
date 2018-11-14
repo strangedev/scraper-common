@@ -1,5 +1,3 @@
-# TEST
-
 class SingletonMeta(type):
     instance = None
 

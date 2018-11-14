@@ -3,7 +3,7 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-from src.scraper_common.webdriver import WebDriver
+from scraper_common.webdriver import WebDriver
 
 
 class TestWebdriver(unittest.TestCase):
