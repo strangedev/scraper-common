@@ -5,8 +5,8 @@ from scraper_common.singleton import SingletonMeta
 
 
 class WebDriver(metaclass=SingletonMeta):
-    def __init__(self):
-        self._driver = WebDriver.newWebDriver()
+    def __init__(self, headless: bool=True):
+        self._driver = WebDriver.newWebDriver(headless=headless)
 
     def __del__(self):
         self._driver.close()
@@ -16,13 +16,16 @@ class WebDriver(metaclass=SingletonMeta):
         return self._driver
 
     @staticmethod
-    def newWebDriver() -> webdriver.Chrome:
-        """
-        Creates a new WebDriver using selenium and navigates
-        to the given url.
-        :return: The WebDriver
+    def newWebDriver(headless: bool=True) -> webdriver.Chrome:
+        """Creates a new WebDriver instance.
+
+        Args:
+            headless: Whether the WebDriver should use a headless browser.
+
+        Returns:
+            A new :class:`selenium.WebDriver` instance.
         """
         options = Options()
-        options.headless = True
+        options.headless = headless
         driver = webdriver.Chrome(options=options)
         return driver

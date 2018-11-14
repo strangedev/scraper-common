@@ -1,7 +1,7 @@
 from setuptools import setup, find_namespace_packages
 
 setup(name='scraper-common',
-      version='1.0.0',
+      version='1.1.0',
       description='Library of things related to web scraping',
       url='https://github.com/strangedev/scraper-common',
       author='Noah Hummel',
