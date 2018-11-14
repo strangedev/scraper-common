@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-from src.lib.singleton import SingletonMeta
+from src.scraper_common.singleton import SingletonMeta
 
 
 class WebDriver(metaclass=SingletonMeta):
